@@ -1,0 +1,19 @@
+{
+  "name": "mindtap",
+  "description": "MindTap | Cengage Tutorial Tasks code.",
+  "version": "1.0.0",
+  "keywords": [
+    "MindTap",
+    "Cengage",
+    "New Perspectives on HTML5, CSS3, and JavaScript, 6e"
+  ],
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "repository": "https://github.com/hesbon-osoro/MindTap.git",
+  "author": "Hesbon Osoro <hesbonosoro1@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.8.0"
+  }
+}
