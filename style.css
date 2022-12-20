@@ -21,13 +21,15 @@ body {
 
 body::before {
   content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -50%;
-  left: -50%;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 200%;
+  height: 200%;
   z-index: -1;
-  background-size: 5%;
+  background-size: 2%;
   background-attachment: fixed;
   background-repeat: space;
   background-image: url(./images/icons/cengage-mindtap.png),
@@ -55,6 +57,7 @@ body::before {
   padding: 15px;
   border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-690/star.svg)
     40 round;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #scroll-button {
@@ -164,14 +167,31 @@ tr td {
 }
 
 @media only screen and (max-width: 767px) {
+  body::before {
+    bottom: -100%;
+    left: -100%;
+  }
   .container {
     text-align: center;
   }
+  .container p {
+    text-align: left;
+  }
   tr td {
+    border-left: 1px dashed #ccc;
     display: block;
     text-align: center;
   }
   tr td:nth-child(odd) {
     border-bottom: none;
+  }
+  tr td:nth-child(even) {
+    padding-bottom: 0.5em;
+  }
+  tr:first-of-type td:first-of-type {
+    border-top: 1px solid #ccc;
+  }
+  tr:last-of-type td:last-of-type {
+    border-bottom: 1px solid #ccc;
   }
 }
